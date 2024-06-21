@@ -4,54 +4,83 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
+
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
-import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Select from '@mui/material/Select';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import { useTheme } from '@mui/material/styles';
+import { FormControl } from '@mui/material';
+
+
+
+const names = [
+    'Oliver Hansen',
+    'Van Henry',
+    'April Tucker',
+    'Ralph Hubbard',
+    'Omar Alexander',
+    'Carlos Abbott',
+    'Miriam Wagner',
+    'Bradley Wilkerson',
+    'Virginia Andrews',
+    'Kelly Snyder',
+];
+
+function getStyles(name, personName, theme) {
+    return {
+        fontWeight:
+            personName.indexOf(name) === -1
+                ? theme.typography.fontWeightRegular
+                : theme.typography.fontWeightMedium,
+    };
+}
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
 
 function Header() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [anchorEl, setAnchorEl] = React.useState(null);
-    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const theme = useTheme();
+    const [personName, setPersonName] = React.useState([]);
+    const [language, setLanguage] = React.useState('ES');
 
-    const mobileMenuId = 'primary-search-account-menu-mobile';
+    const handleChangeLanguage = (event) => {
+        setLanguage(event.target.value);
+    };
+
+
+    const handleChange = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setPersonName(
+            // On autofill we get a stringified value.
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
+
+    const MenuProps = {
+        PaperProps: {
+            style: {
+                maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+                width: 250,
+            },
+        },
+    };
+
     const menuId = 'primary-search-account-menu';
 
-    const handleMobileMenuOpen = (event) => {
-        setMobileMoreAnchorEl(event.currentTarget);
-    };
-
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
 
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
@@ -129,7 +158,7 @@ function Header() {
                     <Box sx={{ flexGrow: 3 }} />
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <Button sx={{color:'black'}}>
+                        <Button sx={{ color: 'black', fontWeight: 700 }}>
                             EXPLORA
                         </Button>
                     </Box>
@@ -149,30 +178,21 @@ function Header() {
                         </IconButton>
                     </Search>
 
-                    
 
-                    
-                    
+
+
+
 
                     {/* PAGES MAPPIN */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
-                                <MailIcon />
+                            <Badge color="error">
+                                <FavoriteBorderIcon />
                             </Badge>
                         </IconButton>
+
                         <IconButton
                             size="large"
-                            aria-label="show 17 new notifications"
-                            color="inherit"
-                        >
-                            <Badge badgeContent={17} color="error">
-                                <NotificationsIcon />
-                            </Badge>
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            edge="end"
                             aria-label="account of current user"
                             aria-controls={menuId}
                             aria-haspopup="true"
@@ -181,19 +201,31 @@ function Header() {
                         >
                             <AccountCircle />
                         </IconButton>
-                    </Box>
-                    <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+
                         <IconButton
                             size="large"
-                            aria-label="show more"
-                            aria-controls={mobileMenuId}
-                            aria-haspopup="true"
-                            onClick={handleMobileMenuOpen}
+                            aria-label="show 17 new notifications"
                             color="inherit"
                         >
-                            <MoreIcon />
+                            <Badge badgeContent={2} color="error">
+                                <ShoppingCartIcon />
+                            </Badge>
                         </IconButton>
                     </Box>
+
+                    <FormControl sx={{ display: { xs: 'none', md: 'flex' }, width: 120, m: 1, marginLeft: 3 , border:1}}>
+                        <Select
+                            defaultValue="ES"
+                            value={language}
+                            onChange={handleChangeLanguage}
+                            inputProps={{ 'aria-label': 'Without label' }}
+                        >
+                            <MenuItem value="ES">
+                               <b>Español</b>
+                            </MenuItem>
+                            <MenuItem value="EN"> <b>English</b></MenuItem>
+                        </Select>
+                    </FormControl>
 
 
                 </Toolbar>
