@@ -78,7 +78,7 @@ const Content = () => {
           flexGrow: 1,
           mt: 10,
           pb: 0,
-          bgcolor: 'pink',
+          bgcolor: 'white',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -148,7 +148,7 @@ const Content = () => {
           sx={{
             flexGrow: 1,
             pb: 0,
-            bgcolor: 'skyblue',
+            bgcolor: 'white',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -163,36 +163,42 @@ const Content = () => {
         <Box sx={{
           flexGrow: 1,
           pb: 0,
-          bgcolor: 'green',
+          bgcolor: 'white',
           display: 'flex',
           position: 'relative',
           mx: 10,
           }}>
           <Grid container spacing={{md:5}} columns={{ md: 12 }} sx={{ p: 4 }} >
             <Grid item md={3} sx={{ textAlign: 'center' }}>
-              <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2, height : 200}}>
-                <img src="../landingPageImg3.png" alt="Imagen que hace alusión a la amortiguación superior" />
+              <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2, height : 230}}>
+                <Box >
+                  <img src="../landingPageImg3.png" alt="Imagen que hace alusión a la amortiguación superior" style={{height:"140px"}}/>
+                  </Box>
+                <Box>
                 <Typography variant="body1" color="initial" sx={{fontFamily: 'DM Sans , sans-serif', fontSize: '28px'}}> <b>Amortiguacion superior</b> <br /></Typography>
-                <Typography variant="body1" color="initial" sx={{textAlign: 'left', fontFamily: 'DM Sans, sans-serif'}}>Proporciona soporte y confort en cada pisada</Typography>
+                
+                
+                <Typography variant="body1" color="initial" sx={{textAlign: 'left', fontFamily: 'DM Sans, sans-serif' , pl:2}}>Proporciona soporte y confort en cada pisada</Typography>
+                </Box>
               </Box>
             </Grid>
             <Grid item md={3} sx={{ textAlign: 'center' }}>
-              <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2, height : 200}}>
-                <img src="../landingPageImg5.png" alt="Imagen que hace alusión a una suela antideslizante" />
+              <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2, height : 230}}>
+                <img src="../landingPageImg5.png" alt="Imagen que hace alusión a una suela antideslizante" style={{height:"140px"}} />
                 <Typography variant="body1" color="initial" sx={{fontFamily: 'DM Sans , sans-serif', fontSize: '28px'}}> <b>Suela Antideslizante <br /></b></Typography>
                 <Typography variant="body1" color="initial" sx={{textAlign: 'center', fontFamily: 'DM Sans, sans-serif'}}>Tracción óptima para cualquier superficie</Typography>
               </Box>
             </Grid>
             <Grid item md={3} sx={{ textAlign: 'center' }}>
-              <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2, height : 200}}>
-                <img src="../landingPageImg2.png" alt="Imagen que hace alusión a la ligereza de la zapatilla" />
+              <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2, height : 230}}>
+                <img src="../landingPageImg2.png" alt="Imagen que hace alusión a la ligereza de la zapatilla" style={{height:"140px"}} />
                 <Typography variant="body1" color="initial" sx={{fontFamily: 'DM Sans , sans-serif', fontSize: '28px'}}> <b>Ligereza Extrema <br /></b></Typography>
                 <Typography variant="body1" color="initial" sx={{textAlign: 'center', fontFamily: 'DM Sans, sans-serif'}}>Fabricado con materiales ultraligeros</Typography>
               </Box>
             </Grid>
             <Grid item md={3} sx={{ textAlign: 'center' }}>
-              <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2, height : 200 }}>
-                <img src="../landingPageImg4.png" alt="Imagen que hace alusión al uso de materiales reciclados para el momento de producir las zapatillas" />
+              <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2, height : 230 }}>
+                <img src="../landingPageImg4.png" alt="Imagen que hace alusión al uso de materiales reciclados para el momento de producir las zapatillas" style={{height:"140px"}} />
                 <Typography variant="body1" color="initial" sx={{fontFamily: 'DM Sans , sans-serif', fontSize: '28px'}}><b>Materiales Ecológicos <br /></b></Typography>
                 <Typography variant="body1" color="initial" sx={{textAlign: 'center', fontFamily: 'DM Sans, sans-serif'}}>Utilizamos materiales reciclados</Typography>
               </Box>
