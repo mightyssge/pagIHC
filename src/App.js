@@ -35,11 +35,11 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Content />
-      <Footer />
+      <Header role = "banner"/>
+      <Content role = "main"/>
+      <Footer role="contentinfo"/>
       <Fab
-        aria-label="Accessibility Modal"
+        aria-label="Accessibility Button"
         sx={{
           position: 'fixed',
           bottom: 40,
@@ -74,7 +74,7 @@ function App() {
           <Typography variant="body1">Aquí puedes ajustar algunas configuraciones básicas de accesibilidad.</Typography>
           <Box sx={{ mt: 2 }}>
             <Typography gutterBottom>Brillo de pantalla</Typography>
-            <Slider defaultValue={50} aria-label="Brightness" />
+            <Slider defaultValue={50} aria-label="Brillo" />
             <FormControlLabel control={<Switch defaultChecked />} label="Modo oscuro" />
             <FormControlLabel control={<Switch />} label="Texto grande" />
           </Box>

@@ -116,7 +116,7 @@ function Header() {
     };
 
     return (
-        <AppBar position="fixed" sx={{ backgroundColor: 'white', borderBottom: 1, color: 'black' }}>
+        <AppBar position="fixed" sx={{ backgroundColor: 'white', borderBottom: 1, color: 'black' }} >
             <Container maxWidth="xl">
                 <Toolbar disableGutters sx={{ height: '100%' }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
@@ -146,7 +146,7 @@ function Header() {
                     <Box sx={{ flexGrow: 3 }} />
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <Button sx={{ color: 'black', fontWeight: 700 }}>
+                        <Button sx={{ color: 'black', fontWeight: 700 }} role='button'>
                             EXPLORA
                         </Button>
                     </Box>
@@ -158,10 +158,11 @@ function Header() {
                         </SearchIconWrapper>
                         <StyledInputBase
                             placeholder="Buscar Productos…"
-                            inputProps={{ 'aria-label': 'search' }}
+                            inputProps={{ 'aria-label': 'Busqueda' }}
+                            role="textbox"
                         />
 
-                        <IconButton size="small">
+                        <IconButton size="small" role='button' aria-label='Activar busqueda por voz'>
                             <KeyboardVoiceIcon sx={{ padding: '5px' }} />
                         </IconButton>
                     </Search>
@@ -173,7 +174,7 @@ function Header() {
 
                     {/* PAGES MAPPIN */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                        <IconButton size="large" aria-label="Ver lista de favoritos" color="inherit" role='button'>
                             <Badge color="error">
                                 <FavoriteBorderIcon />
                             </Badge>
@@ -181,19 +182,21 @@ function Header() {
 
                         <IconButton
                             size="large"
-                            aria-label="account of current user"
+                            aria-label="Ver cuenta del usuario actual"
                             aria-controls={menuId}
                             aria-haspopup="true"
                             onClick={handleProfileMenuOpen}
                             color="inherit"
+                            role='button'
                         >
                             <AccountCircle />
                         </IconButton>
 
                         <IconButton
                             size="large"
-                            aria-label="show 17 new notifications"
+                            aria-label="Ver el carrito de compras"
                             color="inherit"
+                            role='button'
                         >
                             <Badge badgeContent={2} color="error">
                                 <ShoppingCartIcon />
@@ -206,12 +209,13 @@ function Header() {
                             defaultValue="ES"
                             value={language}
                             onChange={handleChangeLanguage}
-                            inputProps={{ 'aria-label': 'Without label' }}
+                            inputProps={{ 'aria-label': 'Selección de idioma' }}
+                            role="combobox"
                         >
-                            <MenuItem value="ES">
+                            <MenuItem value="ES" aria-label='Español'>
                                <b>Español</b>
                             </MenuItem>
-                            <MenuItem value="EN"> <b>English</b></MenuItem>
+                            <MenuItem value="EN" aria-label='English'> <b>English</b></MenuItem>
                         </Select>
                     </FormControl>
 

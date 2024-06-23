@@ -5,113 +5,52 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Accessibility } from '@mui/icons-material';
 
-const HeroSection = () => {
-  return (
 
-    <Box
-      sx={{
-        bgcolor: 'primary.main',
-        color: 'primary.contrastText',
-        py: 8,
-        textAlign: 'center',
-      }}
-    >
-      <Container maxWidth="md">
-        <Typography variant="h2" component="h1" gutterBottom>
-          Welcome to Our E-Commerce Store
-        </Typography>
-        <Typography variant="h5" component="p" gutterBottom>
-          Find the best products at unbeatable prices.
-        </Typography>
-        <Button variant="contained" color="secondary" size="large" sx={{ mt: 3 }}>
-          Shop Now
-        </Button>
-      </Container>
-    </Box>
-  );
-};
-
-const FeaturesSection = () => {
-  return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
-      <Grid container spacing={4}>
-        {/* Repeat this Grid item for each feature */}
-        <Grid item xs={12} sm={6} md={4}>
-          <Paper elevation={3} sx={{ p: 2, height: '100%' }}>
-            <Typography variant="h5" component="h3" gutterBottom>
-              Free Shipping
-            </Typography>
-            <Typography variant="body1">
-              Get free shipping on all orders over $50.
-            </Typography>
-          </Paper>
-        </Grid>
-        {/* ... other features */}
-      </Grid>
-    </Container>
-  );
-};
-
-const CallToActionSection = () => {
-  return (
-    <Box
-      sx={{
-        bgcolor: 'secondary.main',
-        color: 'secondary.contrastText',
-        py: 6,
-        textAlign: 'center',
-      }}
-    >
-      <Container maxWidth="sm">
-        <Typography variant="h4" component="h2" gutterBottom>
-          Sign Up for Exclusive Offers
-        </Typography>
-        <Button variant="contained" color="primary" size="large">
-          Sign Up Now
-        </Button>
-      </Container>
-    </Box>
-  );
-};
 
 const Content = () => {
     const data = [
         {
            name: "Modelo 1",
            class: "Zapatilla Urbana",
-           price: "500.90",
-           imglink : '../shoe1.png'
+           price: "s/.420.90",
+           imglink : '../shoe1.png',
+           alt : "imagen de zapatilla 1 color x con diseño x de color x"
         },
         {
            name: "Modelo 2",
            class: "Zapatilla Deportiva",
-           price: "500.90",
-           imglink : "../shoe2.png"
+           price: "s/.500.90",
+           imglink : "../shoe2.png",
+            alt : "imagen de zapatilla 2 color x con diseño x de color x"
         },
         {
            name: "Modelo 3",
            class: "Zapatilla Urbana",
-           price: "500.90",
-           imglink : "../shoe3.png"
+           price: "s/.435.90",
+           imglink : "../shoe3.png",
+            alt : "imagen de zapatilla 3 con pasadores de color x"
         },
         {
            name: "Modelo 4",
            class: "Zapatilla Deportiva",
-           price: "500.90",
-           imglink : "../shoe4.png"
+           price: "s/.634.90",
+           imglink : "../shoe4.png",
+            alt : "imagen de zapatilla 4 con pasadores de color x y suela de color x"
         },
         {
            name: "Modelo 5",
            class: "Zapatilla Urbana",
-           price: "500.90",
-           imglink : "../shoe5.png"
+           price: "s/.200.90",
+           imglink : "../shoe5.png",
+            alt : "imagen de zapatilla 5 con pasadores de color x y suela de color x"
      
         },
         {
            name: "Modelo 6",
            class: "Zapatilla Urbana",
-           price: "500.90",
-           imglink : "../shoe6.png"
+           price: "s/.500.90",
+           imglink : "../shoe6.png",
+            alt : "imagen de zapatilla 6 con punta de color x y suela de color x"
      
         }
         ]
@@ -183,6 +122,7 @@ const Content = () => {
           </Typography>
         </Box>
         <Button
+        role='button'
           sx={{
             position: 'absolute',
             top: '80%',
@@ -291,8 +231,8 @@ const Content = () => {
           }}>
             <Slider {...settings} >
             {data.map((d) => (
-                <Box variant="div" sx={{m:3 }}>
-                    <img src="../shoe3.png" alt="imagen de zapatilla" ></img>
+                <Box variant="div" sx={{m:3 }} role="button" aria-label="Item de una zapatilla">
+                    <img src={d.imglink} alt={d.alt} ></img>
                     <Box sx={{px:3, pt:2}}>
                     <Typography sx={{ fontFamily: 'DM Sans , sans-serif'}} > <b>{d.name}</b></Typography>
                     <Typography sx={{ fontFamily: 'DM Sans , sans-serif'}}>{d.class}</Typography>

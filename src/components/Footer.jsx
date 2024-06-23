@@ -48,19 +48,19 @@ const Footer = () => {
               Redes sociales 
             </Typography>
             <Box>
-              <Link href="#" color="inherit">
+              <Link href="#" color="inherit" aria-label='Redirecciona a nuestra página de Facebook'>
                 <Facebook />
               </Link>
-              <Link href="#" sx={{ ml: 2 }} color="inherit">
+              <Link href="#" sx={{ ml: 2 }} color="inherit" aria-label="Redirecciona a nuestra página de Twitter">
                 <Twitter />
               </Link>
-              <Link href="#" sx={{ ml: 2 }} color="inherit">
+              <Link href="#" sx={{ ml: 2 }} color="inherit" aria-label="Redirecciona a nuestra página de Instagram">
                 <Instagram />
               </Link>
             </Box>
             <Box>
               <br />
-              <img src="../LIBRORECLAMACIONES.png" alt='Imagen de libro de reclamaciones' />
+              <Link href="#" aria-label="Redirecciona a nuestro libro de reclamaciones"> <img src="../LIBRORECLAMACIONES.png" alt='Imagen de libro de reclamaciones' /></Link>
             </Box>
           </Grid>
         </Grid>
