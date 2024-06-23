@@ -6,45 +6,45 @@ const Footer = () => {
   return (
     <Box component="footer" sx={{ bgcolor: 'black', py: 6 , color : "#FFFF"}}>
       <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          <Grid item xs={12} sm={3}>
-            <Typography variant="h6" color="#FFFF" gutterBottom>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={2}>
+            <Typography variant="h6" color="#FFFF" sx={{ fontFamily: 'Akshar , sans-serif' , fontSize: "32px"}} gutterBottom>
               Nosotros
             </Typography>
-            <Typography variant="subtitle1" color="#FFFF">
-              Description of your e-commerce business or mission statement.
+            <Typography variant="subtitle1"  sx={{ fontFamily: 'Inter , sans-serif' , fontWeight: 200  }} color="#FFFF">
+              Acerca de nosotros
+            </Typography>
+            <Typography variant="subtitle1"  sx={{ fontFamily: 'Inter , sans-serif', fontWeight: 200  }} color="#FFFF">
+              Tiendas
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <Typography variant="h6" color="#FFFF" gutterBottom>
+          <Grid item xs={12} sm={2} sx={{mr:3}}>
+            <Typography variant="h6" color="#FFFF"sx={{ fontFamily: 'Akshar , sans-serif' , fontSize: "32px"}}  gutterBottom>
               Contactanos
             </Typography>
-            <Link href="#" color="#FFFF">
-              About Us
-            </Link>
-            <br />
-            <Link href="#" color="#FFFF">
-              Contact Us
-            </Link>
-            <br />
-            <Link href="#" color="#FFFF">
-              Privacy Policy
-            </Link>
-            <br />
-            <Link href="#" color="#FFFF">
-              Terms of Service
-            </Link>
+            <Typography variant="subtitle1" sx={{ fontFamily: 'Inter , sans-serif' , fontWeight: 200  }} color="#FFFF">
+            (01) 748-2922
+            </Typography>
+            <Typography variant="subtitle1" sx={{ fontFamily: 'Inter , sans-serif' , fontWeight: 200  }} color="#FFFF">
+              contactanos@gmail.com
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <Typography variant="h6" color="#FFFF" gutterBottom>
+          <Grid item xs={12} sm={2} sx={{mr:15}}>
+            <Typography variant="h6" color="#FFFF" sx={{ fontFamily: 'Akshar , sans-serif' , fontSize: "32px"}} gutterBottom>
               Ayuda
             </Typography>
-            <Typography variant="subtitle1" color="#FFFF">
-              Description of your e-commerce business or mission statement.
+            <Typography variant="subtitle1"sx={{ fontFamily: 'Inter , sans-serif' , fontWeight: 200  }}  color="#FFFF">
+              FAQ
+            </Typography>
+            <Typography variant="subtitle1" sx={{ fontFamily: 'Inter , sans-serif' , fontWeight: 200  }} color="#FFFF">
+              Politicas de privacidad
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <Typography variant="h6" color="#FFFF" gutterBottom>
+          <Grid item xs={12} sm={2}>
+
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Typography variant="h6" color="#FFFF" gutterBottom sx={{ fontFamily: 'DM Sans , sans-serif' }}>
               Redes sociales 
             </Typography>
             <Box>
@@ -57,6 +57,10 @@ const Footer = () => {
               <Link href="#" sx={{ ml: 2 }} color="inherit">
                 <Instagram />
               </Link>
+            </Box>
+            <Box>
+              <br />
+              <img src="../LIBRORECLAMACIONES.png" alt='Imagen de libro de reclamaciones' />
             </Box>
           </Grid>
         </Grid>
