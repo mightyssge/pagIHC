@@ -13,35 +13,35 @@ const Content = () => {
            name: "Modelo 1",
            class: "Zapatilla Urbana",
            price: "s/.420.90",
-           imglink : '../shoe1.png',
+           imglink : 'https://drive.google.com/thumbnail?id=1BZvdqarNgFFw-MohwrYapiA3rpNUKXuD',
            alt : "imagen de zapatilla 1 color x con diseño x de color x"
         },
         {
            name: "Modelo 2",
            class: "Zapatilla Deportiva",
            price: "s/.500.90",
-           imglink : "../shoe2.png",
+           imglink : "https://drive.google.com/thumbnail?id=1c9PIPmgIn-QAzH5tbuLZl9x8Nu3z5Rpq",
             alt : "imagen de zapatilla 2 color x con diseño x de color x"
         },
         {
            name: "Modelo 3",
            class: "Zapatilla Urbana",
            price: "s/.435.90",
-           imglink : "../shoe3.png",
+           imglink : "https://drive.google.com/thumbnail?id=1c9PIPmgIn-QAzH5tbuLZl9x8Nu3z5Rpq",
             alt : "imagen de zapatilla 3 con pasadores de color x"
         },
         {
            name: "Modelo 4",
            class: "Zapatilla Deportiva",
            price: "s/.634.90",
-           imglink : "../shoe4.png",
+           imglink : "https://drive.google.com/thumbnail?id=1Bhuoy26OGPES7ojH-NLAvsBGMuYbYWeo",
             alt : "imagen de zapatilla 4 con pasadores de color x y suela de color x"
         },
         {
            name: "Modelo 5",
            class: "Zapatilla Urbana",
            price: "s/.200.90",
-           imglink : "../shoe5.png",
+           imglink : "https://drive.google.com/thumbnail?id=1evVZJdWb2E0cm1QtakeCnjb_a8g16ywe",
             alt : "imagen de zapatilla 5 con pasadores de color x y suela de color x"
      
         },
@@ -49,7 +49,7 @@ const Content = () => {
            name: "Modelo 6",
            class: "Zapatilla Urbana",
            price: "s/.500.90",
-           imglink : "../shoe6.png",
+           imglink : "https://drive.google.com/thumbnail?id=1dSJ7nW48oyUp10kvNyEu_ZA4-FdNClJ-",
             alt : "imagen de zapatilla 6 con punta de color x y suela de color x"
      
         }
@@ -85,7 +85,7 @@ const Content = () => {
       >
         <img
           alt="Imagen de una zapatilla flotante que pertenece a nuestro landing page"
-          src='.../landingPageImg1.png'
+          src='https://drive.google.com/thumbnail?id=1pnib-vrR25-oTDyHNU0cdMpKIwMtbjpu'
           style={{
             height: '90%',
             maxWidth: '85%',
