@@ -60,7 +60,7 @@ const Footer = () => {
             </Box>
             <Box>
               <br />
-              <Link href="#" aria-label="Redirecciona a nuestro libro de reclamaciones"> <img src="../LIBRORECLAMACIONES.png" alt='Imagen de libro de reclamaciones' /></Link>
+              <Link href="#" aria-label="Redirecciona a nuestro libro de reclamaciones"> <img src="https://drive.google.com/thumbnail?id=1ioITubMgZQQoBdLBmsOmB7kEMo3EhdRK" alt='Imagen de libro de reclamaciones' /></Link>
             </Box>
           </Grid>
         </Grid>
