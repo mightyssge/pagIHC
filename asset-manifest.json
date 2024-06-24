@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/pagIHC/static/css/main.4e5d73ae.css",
+    "main.js": "/pagIHC/static/js/main.86e7275e.js",
+    "static/media/slick.svg": "/pagIHC/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/pagIHC/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/pagIHC/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/pagIHC/index.html",
+    "static/media/slick.woff": "/pagIHC/static/media/slick.295183786cd8a1389865.woff",
+    "main.4e5d73ae.css.map": "/pagIHC/static/css/main.4e5d73ae.css.map",
+    "main.86e7275e.js.map": "/pagIHC/static/js/main.86e7275e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e5d73ae.css",
+    "static/js/main.86e7275e.js"
+  ]
+}
