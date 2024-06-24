@@ -121,7 +121,7 @@ function Header() {
                 <Toolbar disableGutters sx={{ height: '100%' }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                         <img
-                            src="/logoIHC.svg"
+                            src="https://drive.google.com/thumbnail?id=1n7sFAbtReInbQcw6srhNO4H62P83uLHq"
                             alt="Logo de SneakerVibe"
                             style={{ height: '50px', padding: '15px 24px' }}
                         />

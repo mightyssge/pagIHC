@@ -85,7 +85,7 @@ const Content = () => {
       >
         <img
           alt="Imagen de una zapatilla flotante que pertenece a nuestro landing page"
-          src='../landingPageImg1.png'
+          src='.../landingPageImg1.png'
           style={{
             height: '90%',
             maxWidth: '85%',
@@ -170,7 +170,7 @@ const Content = () => {
             <Grid item md={3} sx={{ textAlign: 'center',  }}>
               <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2 , height: "90%" }}>
                 <Box >
-                  <img src="../landingPageImg3.png" alt="Imagen que hace alusión a la amortiguación superior" style={{height:"50%"}}/>
+                  <img src="https://drive.google.com/thumbnail?id=1ZaFqeRCMJlnahAWpFmlOdjfG94E1Msse" alt="Imagen que hace alusión a la amortiguación superior" style={{height:"50%"}}/>
                   </Box>
                 <Box>
                 <Typography variant="body1" color="initial" sx={{fontFamily: 'DM Sans , sans-serif', fontSize: '28px'}}> <b>Amortiguacion superior</b> <br /></Typography>
@@ -189,7 +189,7 @@ const Content = () => {
             </Grid>
             <Grid item md={3} sx={{ textAlign: 'center' }}>
               <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2 ,  height: "90%" }}>
-                <img src="../landingPageImg2.png" alt="Imagen que hace alusión a la ligereza de la zapatilla" style={{height:"50%"}} />
+                <img src="https://drive.google.com/thumbnail?id=1bnxnJP9MJDlKNCDY8YvNAcrYuQZkN5l3" alt="Imagen que hace alusión a la ligereza de la zapatilla" style={{height:"50%"}} />
                 <Typography variant="body1" color="initial" sx={{fontFamily: 'DM Sans , sans-serif', fontSize: '28px'}}> <b>Ligereza Extrema <br /></b></Typography>
                 <Typography variant="body1" color="initial" sx={{textAlign: 'center', fontFamily: 'DM Sans, sans-serif'}}>Fabricado con materiales ultraligeros</Typography>
               </Box>
