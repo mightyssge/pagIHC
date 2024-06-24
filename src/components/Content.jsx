@@ -196,7 +196,7 @@ const Content = () => {
             </Grid>
             <Grid item md={3} sx={{ textAlign: 'center' }}>
               <Box sx={{border: 1 , borderColor:"black" , borderRadius : 2, p:2 ,  height: "90%"  }}>
-                <img src="../landingPageImg4.png" alt="Imagen que hace alusión al uso de materiales reciclados para el momento de producir las zapatillas" style={{height:"50%"}} />
+                <img src="https://drive.google.com/thumbnail?id=1GCPoIzRyl-owIScccYOyY5xbalV6jar2" alt="Imagen que hace alusión al uso de materiales reciclados para el momento de producir las zapatillas" style={{height:"50%"}} />
                 <Typography variant="body1" color="initial" sx={{fontFamily: 'DM Sans , sans-serif', fontSize: '28px'}}><b>Materiales Ecológicos <br /></b></Typography>
                 <Typography variant="body1" color="initial" sx={{textAlign: 'center', fontFamily: 'DM Sans, sans-serif'}}>Utilizamos materiales reciclados</Typography>
               </Box>
